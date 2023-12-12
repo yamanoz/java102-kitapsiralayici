@@ -1,8 +1,8 @@
-package kitapsiralayici;
+package Book;
 
 
 
-public class Book {
+public class Book implements Comparable<Book> {
 	
 	private String title;
 	private String author;
@@ -10,6 +10,9 @@ public class Book {
 	private String publishDate;
 
 
+	public int compareTo(Book book) {
+		return this.getTitle().compareTo(book.getTitle());
+	}
 
 public Book(String title,String author,int page,String publishDate) {
 	this.title=title;
@@ -43,8 +46,6 @@ public void setPublishDate(String publishDate) {
 }
 
 
-public int compareTo(Book book) {
-	return this.getTitle().compareTo(book.getTitle());
-}
+
 
 }
